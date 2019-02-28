@@ -25,7 +25,7 @@ CHROMEDRIVER_URL_TEMPLATE = (
 
 CHROMEDRIVER_VERSION_PATTERN = re.compile(r'^\d+\.\d+$')
 CROMEDRIVER_LATEST_VERSION_PATTERN = re.compile(
-    r'Latest-Release:-ChromeDriver-(\d+\.\d+)'
+    r'ChromeDriver (\d*\.\d*\.\d*\.\d*)'
 )
 
 # Global variables
@@ -40,6 +40,7 @@ def get_chromedriver_version():
     response = request.urlopen(CHROMEDRIVER_INFO_URL)
     content = response.read()
     match = CROMEDRIVER_LATEST_VERSION_PATTERN.search(str(content))
+
     if match:
         return match.group(1)
     else:
@@ -108,6 +109,7 @@ class BuildScripts(build_scripts):
         return checksum in chromedriver_checksums
 
     def run(self):
+
         global chromedriver_version, chromedriver_checksums
 
         validate = False
@@ -199,7 +201,7 @@ setup(
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst'))
         .read(),
     keywords='chromedriver installer',
-    url='https://github.com/peterhudec/chromedriver_installer',
+    url='https://github.com/Kucherlogrus/chromedriver_installer',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',

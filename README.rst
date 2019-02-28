@@ -1,7 +1,7 @@
 ChromeDriver Installer for Python
 =================================
-.. image:: https://travis-ci.org/peterhudec/chromedriver_installer.svg?branch=master
-    :target: https://travis-ci.org/peterhudec/chromedriver_installer
+
+This is a fork `ChromeDriver Installer for Python <https://github.com/Kucherlogrus/chromedriver_installer.git>`__ repository
 
 Installs `ChromeDriver executable <https://sites.google.com/a/chromium.org/chromedriver/>`__
 with **pip** or **setup.py**.
@@ -16,7 +16,7 @@ Clone the repository:
 
 .. code-block:: bash
 
-    (e)$ git clone https://github.com/peterhudec/chromedriver_installer.git
+    (e)$ git clone https://github.com/Kucherlogrus/chromedriver_installer.git
 
 Install the most recent **ChromeDriver** version without verifying checksum.
 
